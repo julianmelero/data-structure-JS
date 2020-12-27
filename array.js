@@ -32,7 +32,10 @@ class MyArray
     }
 
     delete(index) {
+        const item = this.data[index];
+        this.shiftIndex(item);
 
+        return item;
     }
 
 
@@ -43,7 +46,7 @@ class MyArray
         }
 
         delete this.data[this.length - 1];
-        return this.length--;
+        this.length--;
     }
 }
 
